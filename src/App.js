@@ -14,15 +14,24 @@ function App() {
   const kelvin = 0;
 
   function onCelciusChange() {
-
+    setTempObj({
+      scale: 'celcius',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
   }
 
   function onFahreniteChange() {
-
+    setTempObj({
+      scale: 'fahrenite',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
   }
 
   function onKelvinChange() {
-
+    setTempObj({
+      scale: 'kelvin',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
   }
 
   return (
