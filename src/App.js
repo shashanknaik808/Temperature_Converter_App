@@ -13,6 +13,31 @@ function App() {
   const fahrenheit = 0;
   const kelvin = 0;
 
+  function f2c(value) {
+    return ((value - 32) * 5) / 9;
+  }
+
+  function k2c(value) {
+    return value - 273;
+  }
+
+  function c2f(value) {
+    return (value * 1.8) + 32;
+  }
+
+  function k2f(value) {
+    return ((value - 273) * 1.8) + 32;
+  }
+
+  function c2k(value) {
+    return value + 273;
+  }
+
+  function f2k(value) {
+    return (((value - 32) * 5) / 9) + 273
+  }
+
+  
   function onCelciusChange() {
     setTempObj({
       scale: 'celcius',
