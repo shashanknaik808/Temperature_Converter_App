@@ -9,9 +9,17 @@ function App() {
     temperature: 0,
   });
 
-  const celsius = 0;
-  const fahrenheit = 0;
-  const kelvin = 0;
+  const celsius = (tempObj.scale === 'fahrenite' || tempObj.scale == 'kelvin') ?
+    (tempObj.scale == 'fahrenite') ? f2c(tempObj.temperature) : k2c(tempObj.temperature)
+    : tempObj.temperature;
+
+  const fahrenheit = (tempObj.scale === 'celsius' || tempObj.scale == 'kelvin') ?
+    (tempObj.scale == 'celsius') ? f2c(tempObj.temperature) : k2c(tempObj.temperature)
+    : tempObj.temperature;
+
+  const kelvin = (tempObj.scale === 'celsius' || tempObj.scale == 'fahrenite') ?
+    (tempObj.scale == 'celsius') ? f2c(tempObj.temperature) : k2c(tempObj.temperature)
+    : tempObj.temperature;
 
   function f2c(value) {
     return ((value - 32) * 5) / 9;
@@ -37,7 +45,7 @@ function App() {
     return (((value - 32) * 5) / 9) + 273
   }
 
-  
+
   function onCelciusChange() {
     setTempObj({
       scale: 'celcius',
