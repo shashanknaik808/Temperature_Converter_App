@@ -1,6 +1,13 @@
 import './App.css';
+import { useState } from 'react';
+import Child from './Child';
 
 function App() {
+
+  const [tempObj, setTempObj] = useState({
+    scale: 'celcius',
+    temperature: 0,
+  });
 
   const celsius = 0;
   const fahrenheit = 0;
