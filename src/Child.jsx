@@ -8,7 +8,7 @@ function Child(props) {
             num = 0;
         }
         else {
-            num.parseInt(e.target.value);
+            num = parseInt(e.target.value);
         }
 
         props.onTemperatureChange(num);
